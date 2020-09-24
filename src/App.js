@@ -17,7 +17,7 @@ export default function App() {
   }, []);
   const getStats = async () => {
     try {
-      const res = await fetch("http://localhost:3000/stats");
+      const res = await fetch("https://ijd-nfl-api.herokuapp.com/stats");
       const data = await res.json();
       setStats(data);
     } catch (error) {
@@ -35,7 +35,7 @@ export default function App() {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/stats",
+        "https://ijd-nfl-api.herokuapp.com/stats",
         formInputs
       );
       const data = response.data
